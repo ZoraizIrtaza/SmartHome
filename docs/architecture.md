@@ -58,7 +58,3 @@ Periodic sensing and telemetry are handled by `BlynkTimer` rather than by a bloc
 Motion and gas/smoke alerts are state based.
 
 For example, a smoke event is generated only when the system changes from the normal state to the alert state. The event is not logged again until the reading first returns below the threshold and later crosses it again.
-
-## Design Constraint
-
-The ESP8266 exposes a single user analog input (`A0`) in this setup. The cleaned firmware therefore assigns `A0` only to the LDR and obtains the MQ-7 measurement through the existing serial interface.
